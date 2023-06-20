@@ -1,0 +1,117 @@
+Catalogue:
+
+	Allied:
+
+		Support Power:
+			Target Lock: Armor debuff increase to 50%
+			Mercury Strike: Change to cluster strike
+			Lightning Rod: Now summon lightning
+			Force Shield: Shield every single building now
+			Zephyr Beacon: Zephyr will execute saturated bombardment
+			Hunter Seeker: More hunter seeker will come out of power plants and war factory
+			Back Warp: Now perform more warping
+			Bloodhound: Abram and aeroblaze inbound
+			Airborne: Now drop SEAL and riot troopers
+			Chrono Boost: Can boost epic unit, speed boost double, ROF quarter
+			Chrono Lift: Cool down reduce further, chrono lift area increase
+			Cryo Shot & Spear: Cool down reduce significantly, effect radius increase		
+			Glacial Screen: No longer affect units movement, effect radius increase
+			Kingsnake: Weapon loadout change to laser
+			Paladin Aid: More Paladin tanks are warped in
+			
+		Super Weapon:
+			Lightning Storm: Lightning strike faster, longer and harder
+			Cryo Blast: WCD can freeze a large area of enemy and make them vulnerable
+			Chrono Vortex: Replace chronosphere. Summon a movable chrono vortex to annhilate all enemy in its way
+			
+		Units:
+			Child of Storm: Laser create a mercury blast
+			Harrier: Prism refraction sincluded in AP payload 
+			Black Eagle: Cryo Missile now splits into cluster and slow enemy
+				
+			
+	Soviet:
+
+		Support Power:
+			Gear Change: Change to gear overcharge, increase vehicle production speed significantly 
+			Drakuv: Constantly heal nearby infantry, better stun gun and more capacity
+			Repair Drone: Drones are equipped with repair rings
+			Elite Reserve: All units are affected
+			Wallbuster: Change to tank buster, splits into multiple warheads before impact 
+			Tank Drop: Now drops apoc tanks
+			Terror Drop: Increase to 10 drones
+			Smoke Bomb: Change to ivan bomb
+			Flame Tower: Change to siege range
+			Overcharge: Tesla weapon dps massively increase
+			Irradiation: Duration double, affect airforce
+			EM Pulse: Radiatation therapy included
+			Instant Shelter: Come with 15 tesla troopers and 
+			Bike Ambush: Bike carries way too much ivan bomb
+			Nuclear Path: General stat boosted
+			Rad Attack: Double the amount of aircraft, explode with iron dragon residue
+			Disruptor: Shoots refracting rad beam
+
+		Units:
+			Foxtrot: Missile now equipped with ivan bomb
+			Centaurion: Refit with EMP cannon and radiation anti-air gun
+		
+		Super Weapon:
+			Tatical Nuke: Change to tatical nuclear power plant
+			Iron Curtain: Affects larger area
+		
+		Buildings:
+			Stalin Fist: Now clone tanks
+	
+	
+	Epsilon:
+
+		Support Power:
+			Regen & Wonder Drugs: Regen/Wonder Drugs for everyone!!!
+			Risen Monolith: Refracting megalaser installed
+			Psychic Flash: Inferno Towers and Antares Batteries can be amplified more frequently now
+			Libra Clone: Libra enters rage mode when a clone is killed, this effect is accumulative
+			Magnetic Beam: Now create gravity anomlies along its way
+			Bloatick Trap: Bloatick no longer suicide upon self detontation
+			Toxic Strike: Change to bloatick strike
+			Barrier: Infantry gain 5x armor
+			Geneburst: Now multiplies and persists for a while
+			Ruiner: Spawn gravitron instead
+
+		Super Weapon:
+			Domination: Mind control a larger area
+			Omega Storm: Psychic dominator can channel omega storm
+			Genetic Mutation: Replace rage induction, and permenantly weaken enemy vehicles
+
+		Units:
+			Dybbuk-A: Uses Resheph warhead
+
+		Buildings:
+			Tank Bunker: Units enter rage mode when inside bunker
+			
+			
+	Foehn:
+
+		Support Power:
+			Nanofiber Sync: Cooldown reduce significantly
+			Devour: Spawn more nano cloud
+			Spin Blade: Affect all units, along with a slight ROF boost
+			Chaos Touch: Enemy confuse for a longer period of time
+			Golden Wind: Armor buff increased to 75%
+			Blackout Missile: Can disable vehicles now
+			Signal Jammer: Jam all enemy weapon in its range
+			Mega Arena: Mega arena shield can cut through everything
+			Harbinger: Collider weapon are more volatile
+			Knightfall: No more rookies, all drop pods field elite troops now
+			Nanocharge: Nanocharge effect affects everything now
+			Boid Blitz: Impact area increased
+			Decoy Team & Squadron: Decoys are significantly harder to disperse
+		
+		Structure:
+			Plasmarizer: Fire in triple burst shot
+			
+		Super Weapon:
+			Great Tempest: More effective against unit now
+			Diver Seeker: Summon swarm of diver bee against enemy
+			Confusion Gas: Replace blasticade, confuse huge area of enemy
+
+			

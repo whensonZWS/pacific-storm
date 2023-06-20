@@ -1,0 +1,2072 @@
+# Yaml script?
+
+Triggers:
+  # - trigger_id: str
+  #   tag_id: auto
+  #   tag_name: auto
+  #   trigger_name: str
+  #   disabled: default 0
+  #   easy: default 1
+  #   medium: default 1
+  #   hard: default 1
+  #   type: default 0
+  #   house: default UnitedStates
+  #   actions:
+  #     - type: 13
+  #       p:
+  #         - 13
+  #   triggers:
+  #     - type: 80
+  #       p: 
+  #         - 12
+  - trigger_id: ISS_TRG_FAC_1
+    trigger_name: soviet enemy
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME04
+  
+  - trigger_id: ISS_TRG_SOV_TIME04
+    trigger_name: soviet 4 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 180
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME06
+      - type: 53
+        p: ISS_TRG_SOV_04A
+  
+  - trigger_id: ISS_TRG_SOV_04A
+    trigger_name: soviet 4 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,29]
+
+  - trigger_id: ISS_TRG_SOV_TIME06
+    trigger_name: soviet 6 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_06A
+      - type: 53
+        p: ISS_TRG_SOV_06B
+      - type: 53
+        p: ISS_TRG_SOV_06C
+      - type: 53
+        p: ISS_TRG_SOV_TIME08
+
+  - trigger_id: ISS_TRG_SOV_06A
+    trigger_name: soviet 6 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,32]
+
+  - trigger_id: ISS_TRG_SOV_06B
+    trigger_name: soviet 6 min wave B
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,28]
+    
+  - trigger_id: ISS_TRG_SOV_06C
+    trigger_name: soviet 6 min stop wave B
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 31
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_06B
+      - type: 54
+        p: ISS_TRG_SOV_06C
+
+  - trigger_id: ISS_TRG_SOV_TIME08
+    trigger_name: soviet 8 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_08A
+      - type: 53
+        p: ISS_TRG_SOV_08B
+      - type: 53
+        p: ISS_TRG_SOV_08C
+      - type: 53
+        p: ISS_TRG_SOV_08D
+      - type: 53
+        p: ISS_TRG_SOV_08E
+      - type: 53
+        p: ISS_TRG_SOV_TIME10
+      - type: 53
+        p: ISS_TRG_SOV_TIME10_PRE
+
+  - trigger_id: ISS_TRG_SOV_08A
+    trigger_name: soviet 8 min wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,28]
+ 
+  - trigger_id: ISS_TRG_SOV_08B
+    trigger_name: soviet 8 min stop wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 31
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_08A
+      - type: 54
+        p: ISS_TRG_SOV_08B
+
+  - trigger_id: ISS_TRG_SOV_08C
+    trigger_name: soviet 8 min wave C
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,13]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,21]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,29]
+
+  - trigger_id: ISS_TRG_SOV_08D
+    trigger_name: soviet 8 min stop wave C
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 16
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_08C
+      - type: 54
+        p: ISS_TRG_SOV_08D
+
+  - trigger_id: ISS_TRG_SOV_08E
+    trigger_name: soviet 8 min wave E
+    disabled: 1
+    type: 0
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_TIME10_PRE
+    trigger_name: soviet 10 pre-roll
+    disabled: 1
+    events:
+      - type: 13
+        p: 90
+    actions:
+      - type: 53
+        p: ISS_TRG_RAN_0
+      - type: 53
+        p: ISS_TRG_RAN_1
+      - type: 53
+        p: ISS_TRG_RAN_2
+
+  - trigger_id: ISS_TRG_SOV_TIME10
+    trigger_name: soviet 10 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 11
+        p: NOSTR:Missile Silo Detected!
+      - type: 53
+        p: ISS_TRG_SILO1_1
+      - type: 53
+        p: ISS_TRG_SILO1_2
+      - type: 53
+        p: ISS_TRG_SILO1_3
+      - type: 53
+        p: ISS_TRG_SOV_TIME11
+
+  - trigger_id: ISS_TRG_SILO1_1
+    trigger_name: silo 1-1
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL1,22]
+      - type: 55
+        p: [1,22]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO1_2
+      - type: 54
+        p: ISS_TRG_SILO1_3
+      - type: 54
+        p: ISS_TRG_SILO1_1
+      
+  - trigger_id: ISS_TRG_SILO1_2
+    trigger_name: silo 1-2
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL2,30]
+      - type: 55
+        p: [1,30]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO1_1
+      - type: 54
+        p: ISS_TRG_SILO1_3
+      - type: 54
+        p: ISS_TRG_SILO1_2
+  
+  - trigger_id: ISS_TRG_SILO1_3
+    trigger_name: silo 1-3
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL3,14]   
+      - type: 55
+        p: [1,14]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO1_1
+      - type: 54
+        p: ISS_TRG_SILO1_2
+      - type: 54
+        p: ISS_TRG_SILO1_3
+
+  - trigger_id: ISS_TRG_SOV_TIME11
+    trigger_name: soviet 11 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME12
+      - type: 53
+        p: ISS_TRG_SOV_11A
+
+  - trigger_id: ISS_TRG_SOV_11A
+    trigger_name: soviet 11 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_TIME12
+    trigger_name: soviet 12 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME13
+      - type: 53
+        p: ISS_TRG_SOV_12A
+      - type: 53
+        p: ISS_TRG_SOV_12B
+      - type: 53
+        p: ISS_TRG_SOV_12C
+
+  - trigger_id: ISS_TRG_SOV_12A
+    trigger_name: soviet 12 min wave A
+    disabled: 1
+    events: 
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,29]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,33]
+
+  - trigger_id: ISS_TRG_SOV_12B
+    trigger_name: soviet 12 min wave B
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,32]
+
+  - trigger_id: ISS_TRG_SOV_12C
+    trigger_name: soviet 12 min stop wave B
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 31
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_12B
+      - type: 54
+        p: ISS_TRG_SOV_12C
+
+  - trigger_id: ISS_TRG_SOV_TIME13
+    trigger_name: soviet 13 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME15
+      - type: 53
+        p: ISS_TRG_SOV_TIME15_PRE
+      - type: 53
+        p: ISS_TRG_SOV_13A
+      - type: 53
+        p: ISS_TRG_SOV_13B
+  
+  - trigger_id: ISS_TRG_SOV_13A
+    trigger_name: soviet 13 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+    
+  - trigger_id: ISS_TRG_SOV_13B
+    trigger_name: soviet 13 min wave B
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 12]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 16]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 20]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 24]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 28]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY, 32]
+
+  - trigger_id: ISS_TRG_SOV_TIME15_PRE
+    trigger_name: 15 minute pre-roll
+    disabled: 1
+    events:
+      - type: 13
+        p: 90
+    actions:
+      - type: 53
+        p: ISS_TRG_RAN_0
+      - type: 53
+        p: ISS_TRG_RAN_1
+      - type: 53
+        p: ISS_TRG_RAN_2
+      - type: 53
+        p: ISS_TRG_RAN_3
+
+  - trigger_id: ISS_TRG_SOV_TIME15
+    trigger_name: soviet 15 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 21
+        p: EVA_EnemyFleetDetected
+      - type: 11
+        p: NOSTR:Shipyard Detected!
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD1_1
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD1_2
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD1_3
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD1_4
+      - type: 53
+        p: ISS_TRG_SOV_TIME16
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD1_1
+    trigger_name: soviet shipyard 1-1
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_A,60]
+      - type: 55
+        p: [1,60]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_1
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD1_2
+    trigger_name: soviet shipyard 1-2
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_B,61]
+      - type: 55
+        p: [1,61]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_2
+    
+  - trigger_id: ISS_TRG_SOV_SHIPYARD1_3
+    trigger_name: soviet shipyard 1-3
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_C,62]
+      - type: 55
+        p: [1,63]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_3
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD1_4
+    trigger_name: soviet shipyard 1-4
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_D,63]
+      - type: 55
+        p: [1,63]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD1_4
+
+  - trigger_id: ISS_TRG_SOV_TIME16
+    trigger_name: soviet 16 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_16A
+      - type: 53
+        p: ISS_TRG_SOV_16B
+      - type: 53
+        p: ISS_TRG_SOV_16C
+      - type: 53
+        p: ISS_TRG_SOV_16D
+      - type: 53
+        p: ISS_TRG_SOV_TIME18
+  
+  - trigger_id: ISS_TRG_SOV_16A
+    trigger_name: soviet 16 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_16B
+    trigger_name: soviet 16 min wave B
+    disabled: 1
+    events:
+      - type: 13
+        p: 7
+    actions:
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,12]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,20]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,28]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_16C
+    trigger_name: soviet 16 min wave C
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,12]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,20]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,28]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_16D
+    trigger_name: soviet 16 min stop wave c
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 26
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_16C
+      - type: 54
+        p: ISS_TRG_SOV_16D
+
+  - trigger_id: ISS_TRG_SOV_TIME18
+    trigger_name: soviet 18 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME19
+      - type: 53
+        p: ISS_TRG_SOV18A
+      - type: 53
+        p: ISS_TRG_SOV18B
+  
+  - trigger_id: ISS_TRG_SOV18A
+    trigger_name: soviet 18 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,29]
+
+  - trigger_id: ISS_TRG_SOV18B
+    trigger_name: soviet 18 min wave B
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,32]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,33]
+
+  - trigger_id: ISS_TRG_SOV_TIME19
+    trigger_name: soviet 19 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME20_PRE
+      - type: 53
+        p: ISS_TRG_SOV_TIME20
+      - type: 53
+        p: ISS_TRG_SOV_19A
+      - type: 53
+        p: ISS_TRG_SOV_19B
+      - type: 53
+        p: ISS_TRG_SOV_19C
+
+  - trigger_id: ISS_TRG_SOV_19A
+    trigger_name: soviet 19 min wave A
+    disabled: 1
+    events:
+      - type: 13
+        p: 0
+    actions: 
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_19B
+    trigger_name: soviet 19 min wave B
+    disabled: 1
+    events:
+      - type: 13
+        p: 20
+    actions: 
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_19C
+    trigger_name: soviet 19 min wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_H1_ATTK_ANY,32]
+      - type: 80
+        p: [SOV_H2_ATTK_ANY,32]
+
+  - trigger_id: ISS_TRG_SOV_TIME20_PRE
+    trigger_name: SOV 20 min pre roll
+    disabled: 1
+    events:
+      - type: 13
+        p: 30
+    actions:
+      - type: 53
+        p: ISS_TRG_RAN_0
+      - type: 53
+        p: ISS_TRG_RAN_1
+      - type: 53
+        p: ISS_TRG_RAN_2 
+
+  - trigger_id: ISS_TRG_SOV_TIME20
+    trigger_name: soviet 20 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 11
+        p: NOSTR:Missile Silos Detected!
+      - type: 53
+        p: ISS_TRG_SOV_TIME21
+      - type: 53
+        p: ISS_TRG_SILO2_1
+      - type: 53
+        p: ISS_TRG_SILO2_2
+      - type: 53
+        p: ISS_TRG_SILO2_3
+  
+  - trigger_id: ISS_TRG_SILO2_1
+    trigger_name: silo 2-1
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL1,22]
+      - type: 125
+        p: [CAMISL2,30]
+      - type: 55
+        p: [1,22]
+      - type: 55
+        p: [1,30]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO2_2
+      - type: 54
+        p: ISS_TRG_SILO2_3
+      - type: 54
+        p: ISS_TRG_SILO2_1
+      
+  - trigger_id: ISS_TRG_SILO2_2
+    trigger_name: silo 2-2
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL2,30]
+      - type: 125
+        p: [CAMISL3,14]
+      - type: 55
+        p: [1,30]
+      - type: 55
+        p: [1,14]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO2_1
+      - type: 54
+        p: ISS_TRG_SILO2_3
+      - type: 54
+        p: ISS_TRG_SILO2_2
+  
+  - trigger_id: ISS_TRG_SILO2_3
+    trigger_name: silo 2-3
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [CAMISL3,14]
+      - type: 125
+        p: [CAMISL1,22]
+      - type: 55
+        p: [1,14]
+      - type: 55
+        p: [1,22]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 54
+        p: ISS_TRG_SILO2_1
+      - type: 54
+        p: ISS_TRG_SILO2_2
+      - type: 54
+        p: ISS_TRG_SILO2_3
+
+  - trigger_id: ISS_TRG_SOV_TIME21
+    trigger_name: soviet 21 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_21A
+      - type: 53
+        p: ISS_TRG_SOV_TIME22
+
+  - trigger_id: ISS_TRG_SOV_21A
+    trigger_name: soviet 21 min wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_A1_ATTK_INF,11]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,13]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,15]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,17]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,19]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,21]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,23]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,25]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,27]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,29]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,31]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,33]
+
+  - trigger_id: ISS_TRG_SOV_TIME22
+    trigger_name: soviet 22 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_22A
+      - type: 53
+        p: ISS_TRG_SOV_22B
+      - type: 53
+        p: ISS_TRG_SOV_22C
+      - type: 53
+        p: ISS_TRG_SOV_TIME24
+  
+  - trigger_id: ISS_TRG_SOV_22A
+    trigger_name: soviet 22 wave A
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,21]
+
+  - trigger_id: ISS_TRG_SOV_22B
+    trigger_name: soviet 22 wave B
+    disabled: 1
+    events:
+      - type: 8
+    actions:  
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,29]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,32]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,33]
+
+  - trigger_id: ISS_TRG_SOV_22C
+    trigger_name: soviet 22 wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 80
+        p: [SOV_S2B_M12_P34_STR,11]
+      - type: 80
+        p: [SOV_S2B_M16_P35_STR,15]
+      - type: 80
+        p: [SOV_S2B_M20_P36_STR,19]
+      - type: 80
+        p: [SOV_S2B_M24_P37_STR,23]
+      - type: 80
+        p: [SOV_S2B_M28_P38_STR,27]
+      - type: 80
+        p: [SOV_S2B_M32_P39_STR,31]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,13]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,17]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,21]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,25]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,29]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_TIME24
+    trigger_name: soviet 24 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME25
+      - type: 53
+        p: ISS_TRG_SOV_TIME25_PRE
+      - type: 53
+        p: ISS_TRG_SOV_24A
+      - type: 53
+        p: ISS_TRG_SOV_24B
+      - type: 53
+        p: ISS_TRG_SOV_24C
+      - type: 53
+        p: ISS_TRG_SOV_24D
+      - type: 53
+        p: ISS_TRG_SOV_24E
+      - type: 53
+        p: ISS_TRG_SOV_24F
+
+  - trigger_id: ISS_TRG_SOV_24A
+    trigger_name: soviet 24 wave A
+    disabled: 1
+    events:
+      - type: 13
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,29]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,33]
+
+  - trigger_id: ISS_TRG_SOV_24B
+    trigger_name: soviet 24 wave B
+    disabled: 1
+    events:
+      - type: 13
+        p: 15
+    actions:
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+      
+  - trigger_id: ISS_TRG_SOV_24C
+    trigger_name: soviet 24 wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 45
+    actions:
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,29]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T1_ATTK_ANY,33]
+
+  - trigger_id: ISS_TRG_SOV_24D
+    trigger_name: soviet 24 wave D
+    disabled: 1
+    events:
+      - type: 13
+        p: 55
+    actions:
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,13]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,17]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,21]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,25]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,29]
+      - type: 80
+        p: [SOV_T3A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T3B_ATTK_STR,33]
+
+  - trigger_id: ISS_TRG_SOV_24E
+    trigger_name: soviet 24 min wave E
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,32]
+
+  - trigger_id: ISS_TRG_SOV_24F
+    trigger_name: soviet 24 min stop wave E
+    disabled: 1
+    events:
+      - type: 13
+        p: 81
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_24E
+      - type: 54
+        p: ISS_TRG_SOV_24F
+
+  - trigger_id: ISS_TRG_SOV_TIME25_PRE
+    trigger_name: 25 minute pre-roll
+    disabled: 1
+    events:
+      - type: 13
+        p: 30
+    actions:
+      - type: 53
+        p: ISS_TRG_RAN_0
+      - type: 53
+        p: ISS_TRG_RAN_1
+      - type: 53
+        p: ISS_TRG_RAN_2
+      - type: 53
+        p: ISS_TRG_RAN_3
+
+  - trigger_id: ISS_TRG_SOV_TIME25
+    trigger_name: soviet 25 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 21
+        p: EVA_EnemyFleetDetected
+      - type: 53
+        p: ISS_TRG_SOV_TIME26
+      - type: 11
+        p: NOSTR:Shipyard Detected!
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD2_1
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD2_2
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD2_3
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD2_4
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD2_1
+    trigger_name: soviet shipyard 2-1
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_A,60]
+      - type: 55
+        p: [1,60]
+      - type: 125
+        p: [NAYARD_SPAWNER_B,61]
+      - type: 55
+        p: [1,61]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1B
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_1
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD2_2
+    trigger_name: soviet shipyard 2-2
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 37
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_B,61]
+      - type: 55
+        p: [1,61]
+      - type: 125
+        p: [NAYARD_SPAWNER_C,62]
+      - type: 55
+        p: [1,62]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_2B
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_2
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD2_3
+    trigger_name: soviet shipyard 2-3
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 37
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_C,62]
+      - type: 55
+        p: [1,62]
+      - type: 125
+        p: [NAYARD_SPAWNER_D,63]
+      - type: 55
+        p: [1,63]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_3B
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_4
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_3
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD2_4
+    trigger_name: soviet shipyard 2-4
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 36
+        p: 0
+      - type: 36
+        p: 1
+    actions:
+      - type: 125
+        p: [NAYARD_SPAWNER_D,63]
+      - type: 55
+        p: [1,63]
+      - type: 125
+        p: [NAYARD_SPAWNER_A,60]
+      - type: 55
+        p: [1,60]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_4B
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1A
+      - type: 53
+        p: ISS_TRG_SOV_SHIPYARD_1B
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_1
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_2
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_3
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD2_4
+      
+  - trigger_id: ISS_TRG_SOV_TIME26
+    trigger_name: soviet 26 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME27
+      - type: 53
+        p: ISS_TRG_SOV_26A
+      - type: 53
+        p: ISS_TRG_SOV_26B
+      - type: 53
+        p: ISS_TRG_SOV_26C
+      - type: 53
+        p: ISS_TRG_SOV_26D
+      - type: 53
+        p: ISS_TRG_SOV_26E
+      - type: 53
+        p: ISS_TRG_SOV_26F
+      - type: 53
+        p: ISS_TRG_SOV_26G
+      - type: 53
+        p: ISS_TRG_SOV_26H
+  
+  - trigger_id: ISS_TRG_SOV_26A
+    trigger_name: soviet 26 min wave A
+    disabled: 1
+    events:
+      - type: 13
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,15]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,17]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,23]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,25]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,31]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,32]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,33]
+    
+  - trigger_id: ISS_TRG_SOV_26B
+    trigger_name: soviet 26 min wave B
+    disabled: 1
+    events:
+      - type: 13
+        p: 25
+    actions:
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,11]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,13]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,19]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,21]
+      - type: 80
+        p: [SOV_T4A_ATTK_ANY,27]
+      - type: 80
+        p: [SOV_T4B_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_T4C_ATTK_ANY,29]
+
+  - trigger_id: ISS_TRG_SOV_26C
+    trigger_name: soviet 26 min wave C
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_T2_ATTK_ANY,32]
+
+  - trigger_id: ISS_TRG_SOV_26D
+    trigger_name: soviet 26 min stop wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 41
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_26C
+      - type: 54
+        p: ISS_TRG_SOV_26D
+  
+  - trigger_id: ISS_TRG_SOV_26E
+    trigger_name: soviet 26 min wave E
+    disabled: 1
+    type: 2
+    evetns:
+      - type: 13
+        p: 7
+    actions:
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,12]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,20]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,28]
+      - type: 80
+        p: [SOV_S1A_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_26F
+    trigger_name: soviet 26 min stop wave E
+    disabled: 1
+    type: 2
+    evetns:
+      - type: 13
+        p: 43
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_26E
+      - type: 54
+        p: ISS_TRG_SOV_26F
+
+  - trigger_id: ISS_TRG_SOV_26G
+    trigger_name: soviet 26 min wave G
+    disabled: 1
+    events:
+      - type: 13
+        p: 18
+    actions:
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,12]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,20]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,28]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_26H
+    trigger_name: soviet 26 min wave H
+    disabled: 1
+    events:
+      - type: 13
+        p: 37
+    actions:
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,12]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,16]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,20]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,24]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,28]
+      - type: 80
+        p: [SOV_S1B_ATTK_STR,32]
+
+  - trigger_id: ISS_TRG_SOV_TIME27
+    trigger_name: soviet 27 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME28
+  
+  - trigger_id: ISS_TRG_SOV_TIME28
+    trigger_name: soviet 28 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME30
+      - type: 53
+        p: ISS_TRG_SOV_28A
+      - type: 53
+        p: ISS_TRG_SOV_28B
+      - type: 53
+        p: ISS_TRG_SOV_28C
+  
+  - trigger_id: ISS_TRG_SOV_28A
+    trigger_name: soviet 28 min wave A
+    disabled: 1
+    events:
+      - type: 13
+        p: 0
+    actions:
+      - type: 80
+        p: [SOV_S2B_M12_P34_STR,11]
+      - type: 80
+        p: [SOV_S2B_M16_P35_STR,15]
+      - type: 80
+        p: [SOV_S2B_M20_P36_STR,19]
+      - type: 80
+        p: [SOV_S2B_M24_P37_STR,23]
+      - type: 80
+        p: [SOV_S2B_M28_P38_STR,27]
+      - type: 80
+        p: [SOV_S2B_M32_P39_STR,31]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,13]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,17]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,21]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,25]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,29]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,33]
+  
+  - trigger_id: ISS_TRG_SOV_28B
+    trigger_name: soviet 28 min wave B
+    disabled: 1
+    events:
+      - type: 13
+        p: 20
+    actions:
+      - type: 80
+        p: [SOV_S2B_M12_P34_STR,13]
+      - type: 80
+        p: [SOV_S2B_M16_P35_STR,17]
+      - type: 80
+        p: [SOV_S2B_M20_P36_STR,21]
+      - type: 80
+        p: [SOV_S2B_M24_P37_STR,25]
+      - type: 80
+        p: [SOV_S2B_M28_P38_STR,29]
+      - type: 80
+        p: [SOV_S2B_M32_P39_STR,33]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,11]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,15]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,19]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,23]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,27]
+      - type: 80
+        p: [SOV_S2A_ATTK_STR,31]
+
+  - trigger_id: ISS_TRG_SOV_28C
+    trigger_name: soviet 28 min wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_A2_ATTK_INF,11]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,13]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,15]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,17]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,19]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,21]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,23]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,25]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,27]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,29]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,31]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,33] 
+    
+  - trigger_id: ISS_TRG_SOV_TIME30
+    trigger_name: soviet 30 min
+    disabled: 1
+    house: Neutral
+    events:
+      - type: 13
+        p: 120
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME31
+      - type: 11
+        p: NOSTR:Missile Silos Detected!
+      - type: 125
+        p: [CAMISL1,22]
+      - type: 55
+        p: [1,22]
+      - type: 125
+        p: [CAMISL2,30]
+      - type: 55
+        p: [1,30]
+      - type: 125
+        p: [CAMISL3,14]
+      - type: 55
+        p: [1,14]
+      - type: 53
+        p: ISS_TRG_GIVE_D
+  
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_1A
+    trigger_name: soviet shipyard1 dred spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 80
+        p: [SOV_SP1_ATTK_STR,60]
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_1B
+    trigger_name: soviet shipyard1 stop spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 61
+        p: [0,NAYARD_SPAWNER_A]
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_1A
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_1B
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_2A
+    trigger_name: soviet shipyard2 dred spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 80
+        p: [SOV_SP1_ATTK_STR,61]
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_2B
+    trigger_name: soviet shipyard2 stop spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 61
+        p: [0,NAYARD_SPAWNER_B]
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_2A
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_2B
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_3A
+    trigger_name: soviet shipyard3 dred spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 80
+        p: [SOV_SP1_ATTK_STR,62]
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_3B
+    trigger_name: soviet shipyard3 stop spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 61
+        p: [0,NAYARD_SPAWNER_C]
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_3A
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_3B
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_4A
+    trigger_name: soviet shipyard4 dred spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 80
+        p: [SOV_SP1_ATTK_STR,63]
+
+  - trigger_id: ISS_TRG_SOV_SHIPYARD_4B
+    trigger_name: soviet shipyard4 stop spawn
+    disabled: 1
+    type: 2
+    events:
+      - type: 61
+        p: [0,NAYARD_SPAWNER_D]
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_4A
+      - type: 54
+        p: ISS_TRG_SOV_SHIPYARD_4B
+
+  - trigger_id: ISS_TRG_RAN_0
+    trigger_name: random variable 0
+    disabled: 1
+    type: 2
+    events:
+      - type: 51
+        p: 10
+    actions:
+      - type: 57
+        p: 0
+      - type: 57
+        p: 1
+      - type: 54
+        p: ISS_TRG_RAN_1
+      - type: 54
+        p: ISS_TRG_RAN_2
+      - type: 54
+        p: ISS_TRG_RAN_3
+      - type: 54
+        p: ISS_TRG_RAN_0
+  
+  - trigger_id: ISS_TRG_RAN_1
+    trigger_name: random variable 1
+    disabled: 1
+    type: 2
+    events:
+      - type: 51
+        p: 10
+    actions:
+      - type: 56
+        p: 0
+      - type: 57
+        p: 1
+      - type: 54
+        p: ISS_TRG_RAN_2
+      - type: 54
+        p: ISS_TRG_RAN_3
+      - type: 54
+        p: ISS_TRG_RAN_0
+      - type: 54
+        p: ISS_TRG_RAN_1
+
+  - trigger_id: ISS_TRG_RAN_2
+    trigger_name: random variable 2
+    disabled: 1
+    type: 2
+    events:
+      - type: 51
+        p: 10
+    actions:
+      - type: 57
+        p: 0
+      - type: 56
+        p: 1
+      - type: 54
+        p: ISS_TRG_RAN_0
+      - type: 54
+        p: ISS_TRG_RAN_1
+      - type: 54
+        p: ISS_TRG_RAN_3
+      - type: 54
+        p: ISS_TRG_RAN_2
+
+  - trigger_id: ISS_TRG_RAN_3
+    trigger_name: random variable 3
+    disabled: 1
+    type: 2
+    events:
+      - type: 51
+        p: 10
+    actions:
+      - type: 56
+        p: 0
+      - type: 56
+        p: 1
+      - type: 54
+        p: ISS_TRG_RAN_0
+      - type: 54
+        p: ISS_TRG_RAN_1
+      - type: 54
+        p: ISS_TRG_RAN_2
+      - type: 54
+        p: ISS_TRG_RAN_3
+
+  - trigger_id: ISS_TRG_GIVE_D
+    trigger_name: Give All Neutral to Player D
+    house: Neutral
+    type: 2
+    disabled: 1
+    events:
+      - type: 13
+        p: 1
+    actions:
+      - type: 36
+        p: 4478
+      - type: 54
+        p: ISS_TRG_GIVE_D
+

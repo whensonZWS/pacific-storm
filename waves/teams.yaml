@@ -1,0 +1,169 @@
+
+Teams:
+  # team_id: str 
+  # House: str
+  # Name: default team_id
+
+  - team_id: S001_TEAM
+    taskforce: Sov T1
+    script: PTRL_098
+    name: Sov T1 Generic
+    house: <Player @ D>
+
+  - team_id: SOV_T1_ATTK_ANY
+    taskforce: SOV_T1
+    script: ATTK_ANY
+    name: Sov T1 Attack Any
+    house: <Player @ D>
+
+  - team_id: SOV_T2_ATTK_ANY
+    taskforce: SOV_T2
+    script: ATTK_ANY
+    name: Sov T2 Attack Any
+    house: <Player @ D>
+
+  - team_id: SOV_T3A_ATTK_ANY
+    taskforce: SOV_T3A
+    script: ATTK_ANY
+    name: Sov T3A Attack Any
+    house: <Player @ D>
+
+  - team_id: SOV_T3B_ATTK_STR
+    taskforce: SOV_T3B
+    script: ATTK_STR
+    name: Sov T3B Attack structure
+    house: <Player @ D>
+  
+  - team_id: SOV_S1A_ATTK_STR
+    taskforce: SOV_S1A
+    script: ATTK_STR
+    name: Sov S1A Attack structure
+    suicide: yes
+    house: <Player @ D>
+
+  - team_id: SOV_S1B_ATTK_STR
+    taskforce: SOV_S1B
+    script: ATTK_STR
+    name: Sov S1A Attack structure
+    house: <Player @ D>
+
+  - team_id: SOV_H1_ATTK_ANY
+    taskforce: SOV_H1
+    script: ATTK_ANY
+    name: Sov Hero 1 Attack Any
+    house: <Player @ D>
+
+  - team_id: SOV_SP1_ATTK_STR
+    taskforce: SOV_SP1
+    script: ATTK_STR
+    name: Sov Naval Siege
+    house: <Player @ D>
+
+  - team_id: SOV_S1A_ATTK_STR
+    taskforce: SOV_S1A
+    script: ATTK_STR
+    name: Sov Siege 1A Attack structure
+    house: <Player @ D>
+
+  - team_id: SOV_S2A_ATTK_STR
+    taskforce: SOV_S2A
+    script: ATTK_STR
+    name: Sov Siege 2A Attack structure
+    house: <Player @ D>
+
+  - team_id: SOV_S2B_ATTK_STR
+    taskforce: SOV_S2B
+    script: ATTK_STR
+    name: Sov Siege 2B Attack structure generic
+    house: <Player @ D>
+  
+  - team_id: SOV_S2B_M12_P34_STR
+    taskforce: SOV_S2B
+    script: M12_P34_STR
+    name: Sov Siege 2B move to 12 patrol to 34 attack structure
+    house: <Player @ D>
+      
+  - team_id: SOV_S2B_M16_P35_STR
+    taskforce: SOV_S2B
+    script: M16_P35_STR
+    name: Sov Siege 2B move to 16 patrol to 35 attack structure
+    house: <Player @ D>  
+      
+  - team_id: SOV_S2B_M20_P36_STR
+    taskforce: SOV_S2B
+    script: M20_P36_STR
+    name: Sov Siege 2B move to 12 patrol to 34 attack structure
+    house: <Player @ D>  
+      
+  - team_id: SOV_S2B_M24_P37_STR
+    taskforce: SOV_S2B
+    script: M24_P37_STR
+    name: Sov Siege 2B move to 20 patrol to 37 attack structure
+    house: <Player @ D>  
+      
+  - team_id: SOV_S2B_M28_P38_STR
+    taskforce: SOV_S2B
+    script: M28_P38_STR
+    name: Sov Siege 2B move to 28 patrol to 38 attack structure
+    house: <Player @ D>  
+      
+  - team_id: SOV_S2B_M32_P39_STR
+    taskforce: SOV_S2B
+    script: M32_P39_STR
+    name: Sov Siege 2B move to 32 patrol to 39 attack structure
+    house: <Player @ D>  
+    
+  - team_id: SOV_A1_ATTK_INF
+    taskforce: SOV_A1
+    script: ATTK_INF
+    name: Sov Air attack infantry
+    house: <Player @ D>
+
+  - team_id: SOV_A1_ATTK_TNK
+    taskforce: SOV_A1
+    script: ATTK_TNK
+    name: Sov Air attack tank
+    house: <Player @ D>
+
+  - team_id: SOV_A2_ATTK_INF
+    taskforce: SOV_A2
+    script: ATTK_INF
+    name: Sov Air 2 attack infantry
+    house: <Player @ D>
+
+  - team_id: SOV_A2_ATTK_TNK
+    taskforce: SOV_A2
+    script: ATTK_TNK
+    name: Sov Air 2 attack tank
+    house: <Player @ D>
+
+  - team_id: SOV_T4A_ATTK_ANY
+    taskforce: SOV_T4A
+    script: ATTK_ANY
+    name: Sov T4A attack any
+    house: <Player @ D>
+
+  - team_id: SOV_T4B_ATTK_ANY
+    taskforce: SOV_T4B
+    script: ATTK_ANY
+    name: Sov T4A attack any
+    house: <Player @ D>
+
+  - team_id: SOV_T4C_ATTK_ANY
+    taskforce: SOV_T4C
+    script: ATTK_ANY
+    name: Sov T4C attack any
+    house: <Player @ D>
+
+  - team_id: SOV_H2_ATTK_ANY
+    taskforce: SOV_H2
+    script: ATTK_ANY
+    name: Sov Hero 2 attack any
+    house: <Player @ D>
+  
+
+
+
+
+
+

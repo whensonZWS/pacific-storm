@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+
+
+</style>
+<head>
+<title> my first page </title>
+
+<body>
+
+
+
+
+
+<center>
+
+<h1>Waypoint Helper</h1>
+
+<p> Convert Final ALert Waypoint to String Literal</p>
+<br>
+<button onclick="generate_number()"> Compute </button>
+<input id="v" value="" onchange="generate_number()">
+<br>
+<br>
+Convert to<div id="letter"></div>
+<div id="container" align="center">
+
+
+</div>
+
+
+
+
+</center>
+
+</body>
+<script>
+
+
+function div_excel(n)
+{
+    div = Math.floor(n / 26);
+    mod = n % 26;
+    if(mod == 0) return div - 1;
+    return div;
+}
+
+function mod_excel(n)
+{
+    mod = n % 26;
+    if(mod == 0) return 26;
+    return mod;
+}
+
+function excel_col(num)
+{
+    result = "";
+    const alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        while(num>0){
+            result = alp.charAt(mod_excel(num)-1) + result;
+            num = div_excel(num);
+            
+        }
+    return result;
+}
+
+function generate_number()
+{
+	waypoint_number=document.getElementById("v").value;
+    if (!isNaN(waypoint_number)){
+        document.getElementById('letter').innerHTML=excel_col(Number(waypoint_number)+1)
+    }
+	
+}
+
+</script>
+
+</html>

@@ -1,0 +1,88 @@
+.\pacific storm survival (no ini).map
+.\modules\airborne.ini
+.\modules\back warp.ini
+.\modules\better mines.ini
+.\modules\barrier.ini
+.\modules\bike ambush.ini
+.\modules\bloatick trap.ini
+.\modules\bloodhound.ini
+.\modules\boid blitz.ini
+.\modules\chaos touch.ini
+.\modules\chrono boost.ini
+.\modules\chrono lift.ini
+.\modules\chrono vortex.ini
+.\modules\confusion gas.ini
+.\modules\cryo blast.ini
+.\modules\cryo shot.ini
+.\modules\decoy team.ini
+.\modules\blackout missile.ini
+.\modules\devourer.ini
+.\modules\disruptor.ini
+.\modules\diver seeker.ini
+.\modules\drakuv.ini
+.\modules\elite reserve.ini
+.\modules\EM pulse.ini
+.\modules\flame tower.ini
+.\modules\force shield.ini
+.\modules\gear change.ini
+.\modules\geneburst.ini
+.\modules\genetic mutation.ini
+.\modules\glacial screen.ini
+.\modules\golden wind.ini
+.\modules\great tempest.ini
+.\modules\harbinger.ini
+.\modules\hunter seeker.ini
+.\modules\instant shelter.ini
+.\modules\iron curtain.ini
+.\modules\irradiate.ini
+.\modules\kingsnake.ini
+.\modules\knightfall.ini
+.\modules\libra clone.ini
+.\modules\lightning rod.ini
+.\modules\lightning storm.ini
+.\modules\magnetic beam.ini
+.\modules\megaarena.ini
+.\modules\mercury strike.ini
+.\modules\nanocharge.ini
+.\modules\nanofiber sync.ini
+.\modules\nuclear path.ini
+.\modules\omega storm.ini
+.\modules\overcharge.ini
+.\modules\paladin aid.ini
+.\modules\plasmerizer.ini
+.\modules\psychic dominator.ini
+.\modules\psychic flash.ini
+.\modules\rad attack.ini
+.\modules\regen drugs.ini
+.\modules\repair drone.ini
+.\modules\risen monolith.ini
+.\modules\ruiner.ini
+.\modules\signal jammer.ini
+.\modules\smoke bomb.ini
+.\modules\spinblade.ini
+.\modules\stalin fist.ini
+.\modules\tank bunker.ini
+.\modules\tank drop.ini
+.\modules\target lock.ini
+.\modules\terror drop.ini
+.\modules\toxic strike.ini
+.\modules\wallbuster.ini
+.\modules\widow.ini
+.\modules\zephyrobot.ini
+.\modules\nuke.ini
+.\modules\more bounty.ini
+.\modules\less debris.ini
+.\modules\less shaking.ini
+.\modules\old question mark.ini
+.\modules\better hero.ini
+.\modules\siegfield die.ini
+.\modules\airforce emp.ini
+.\waves\scripts.ini
+.\waves\taskforces.ini
+.\waves\teams.ini
+.\waves\triggers.ini
+.\waves\map_specific.ini
+
+-o
+
+.\dist\pacific storm survival.map
