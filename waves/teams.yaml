@@ -160,6 +160,12 @@ Teams:
     script: ATTK_ANY
     name: Sov Hero 2 attack any
     house: <Player @ D>
+
+  - team_id: SOV_H3_ATTK_ANY
+    taskforce: SOV_H3
+    script: ATTK_ANY
+    name: Sov Hero 3 attack any
+    house: <Player @ D>
   
 
 

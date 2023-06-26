@@ -1039,13 +1039,17 @@ Triggers:
       - type: 53
         p: ISS_TRG_SOV_21A
       - type: 53
+        p: ISS_TRG_SOV_21B
+      - type: 53
         p: ISS_TRG_SOV_TIME22
 
   - trigger_id: ISS_TRG_SOV_21A
     trigger_name: soviet 21 min wave A
     disabled: 1
+    type: 2
     events:
-      - type: 8
+      - type: 13
+        p: 3
     actions:
       - type: 80
         p: [SOV_A1_ATTK_INF,11]
@@ -1071,6 +1075,19 @@ Triggers:
         p: [SOV_A1_ATTK_INF,31]
       - type: 80
         p: [SOV_A1_ATTK_TNK,33]
+
+  - trigger_id: ISS_TRG_SOV_21B
+    trigger_name: soviet 21 min stop wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 20
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_21A
+      - type: 54
+        p: ISS_TRG_SOV_21B
 
   - trigger_id: ISS_TRG_SOV_TIME22
     trigger_name: soviet 22 min
@@ -1193,6 +1210,8 @@ Triggers:
         p: ISS_TRG_SOV_24E
       - type: 53
         p: ISS_TRG_SOV_24F
+      - type: 53
+        p: ISS_TRG_SOV_24G
 
   - trigger_id: ISS_TRG_SOV_24A
     trigger_name: soviet 24 wave A
@@ -1354,6 +1373,26 @@ Triggers:
         p: ISS_TRG_SOV_24E
       - type: 54
         p: ISS_TRG_SOV_24F
+
+  - trigger_id: ISS_TRG_SOV_24E
+    trigger_name: soviet 24 min wave G
+    disabled: 1
+    events:
+      - type: 13
+        p: 0
+    actions:
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,12]
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,16]
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,20]
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,24]
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,28]
+      - type: 80
+        p: [SOV_H3_ATTK_ANY,32]
 
   - trigger_id: ISS_TRG_SOV_TIME25_PRE
     trigger_name: 25 minute pre-roll
@@ -1874,6 +1913,160 @@ Triggers:
         p: [1,14]
       - type: 53
         p: ISS_TRG_GIVE_D
+
+  - trigger_id: ISS_TRG_SOV_TIME31
+    trigger_name: soviet 31 min
+    disabled: 1
+    events:
+      - type: 13
+        p: 60
+    actions:
+      - type: 53
+        p: ISS_TRG_SOV_TIME32
+      - type: 53
+        p: ISS_TRG_SOV_31A
+      - type: 53
+        p: ISS_TRG_SOV_31B
+      - type: 53
+        p: ISS_TRG_SOV_31C
+      - type: 53
+        p: ISS_TRG_SOV_31D
+      - type: 53
+        p: ISS_TRG_SOV_31E
+      - type: 53
+        p: ISS_TRG_SOV_31F
+
+  - trigger_id: ISS_TRG_SOV_31A
+    trigger_name: soviet 31 min wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 3
+    actions:
+      - type: 80
+        p: [SOV_A1_ATTK_INF,11]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,13]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,15]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,17]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,19]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,21]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,23]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,25]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,27]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,29]
+      - type: 80
+        p: [SOV_A1_ATTK_INF,31]
+      - type: 80
+        p: [SOV_A1_ATTK_TNK,33]
+
+  - trigger_id: ISS_TRG_SOV_31B
+    trigger_name: soviet 31 min stop wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 20
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_31A
+      - type: 54
+        p: ISS_TRG_SOV_31B
+  
+  - trigger_id: ISS_TRG_SOV_31C
+    trigger_name: soviet 31 min wave C
+    disabled: 1
+    events:
+      - type: 13
+        p: 0
+    actions:
+      - type: 80
+        p: [SOV_A2_ATTK_INF,11]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,13]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,15]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,17]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,19]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,21]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,23]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,25]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,27]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,29]
+      - type: 80
+        p: [SOV_A2_ATTK_INF,31]
+      - type: 80
+        p: [SOV_A2_ATTK_TNK,33] 
+    
+  - trigger_id: ISS_TRG_SOV_31D
+    trigger_name: soviet 31 Wave D
+    disabled: 1
+    type: 2
+    events:
+      - type: 15
+        p: 5
+    actions:
+      - type: 80
+        p: [SOV_S1A_ATK_STR,12]
+      - type: 80
+        p: [SOV_S1A_ATK_STR,16]
+      - type: 80
+        p: [SOV_S1A_ATK_STR,20]
+      - type: 80
+        p: [SOV_S1A_ATK_STR,24]
+      - type: 80
+        p: [SOV_S1A_ATK_STR,28]
+      - type: 80
+        p: [SOV_S1A_ATK_STR,32]
+  
+  - trigger_id: ISS_TRG_SOV_31E
+    trigger_name: soviet 31 stop Wave D
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 31
+    actions:
+      - type: 54
+        p: ISS_TRG_SOV_31D
+      - type: 54
+        p: ISS_TRG_SOV_31E
+  
+  - trigger_id: ISS_TRG_SOV_31F
+    trigger_name: soviet 31 Wave F
+    disabled: 1
+    events:
+      - type: 8
+    actions:
+      - type: 80
+        p: [SOV_S2A_ATK_STR,12]
+      - type: 80
+        p: [SOV_S2A_ATK_STR,16]
+      - type: 80
+        p: [SOV_S2A_ATK_STR,20]
+      - type: 80
+        p: [SOV_S2A_ATK_STR,24]
+      - type: 80
+        p: [SOV_S2A_ATK_STR,28]
+      - type: 80
+        p: [SOV_S2A_ATK_STR,32]
+    
   
 
   - trigger_id: ISS_TRG_SOV_SHIPYARD_1A
