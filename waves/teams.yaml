@@ -16,11 +16,25 @@ Teams:
     name: Sov T1 Attack Any
     house: <Player @ D>
 
+  - team_id: SOV_AB_T1_ATTK_ANY
+    taskforce: SOV_T1
+    script: ATTK_ANY
+    name: SOV airborne T1 attack any
+    house: <Player @ D>
+    droppod: yes
+
   - team_id: SOV_T2_ATTK_ANY
     taskforce: SOV_T2
     script: ATTK_ANY
     name: Sov T2 Attack Any
     house: <Player @ D>
+
+  - team_id: SOV_AB_T2_ATTK_ANY
+    taskforce: SOV_T2
+    script: ATTK_ANY
+    name: Sov airborne T2 Attack Any
+    house: <Player @ D>
+    droppod: yes
 
   - team_id: SOV_T3A_ATTK_ANY
     taskforce: SOV_T3A
@@ -166,6 +180,16 @@ Teams:
     script: ATTK_ANY
     name: Sov Hero 3 attack any
     house: <Player @ D>
+
+  - team_id: SOV_I1A_VS_POW
+    taskforce: SOV_I1B
+    script: ATTK_POW
+    name: soviet spy vs power
+    house: <Player @ D>
+    aggressive: no
+    avoidthreats: no
+
+
   
 
 

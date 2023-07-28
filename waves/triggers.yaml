@@ -1770,11 +1770,54 @@ Triggers:
     disabled: 1
     events:
       - type: 13
-        p: 60
+        p: 90
     actions:
       - type: 53
         p: ISS_TRG_SOV_TIME28
+      - type: 53
+        p: ISS_TRG_SOV_27A
+      - type: 53
+        p: ISS_TRG_SOV_27B
+
   
+  - trigger_id: ISS_TRG_SOV_27A
+    trigger_name: soviet 27 wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 10
+    actions:
+      - type: 80
+        p: [SOV_AB_T1_ATTK_ANY,40]
+      - type: 80
+        p: [SOV_AB_T1_ATTK_ANY,41]
+      - type: 80
+        p: [SOV_AB_T1_ATTK_ANY,42]
+      - type: 80
+        p: [SOV_AB_T2_ATTK_ANY,40]
+      - type: 80
+        p: [SOV_AB_T2_ATTK_ANY,41]
+      - type: 80
+        p: [SOV_AB_T2_ATTK_ANY,42]
+
+
+  - trigger_id: ISS_TRG_SOV_27B
+    trigger_name: soviet 27 stop wave A
+    disabled: 1
+    type: 2
+    events:
+      - type: 13
+        p: 21
+    actions:
+      - type: 54
+        p: [ISS_TRG_SOV_27A,24]
+      - type: 54
+        p: [ISS_TRG_SOV_27B,24]
+
+
+
+
   - trigger_id: ISS_TRG_SOV_TIME28
     trigger_name: soviet 28 min
     disabled: 1
